@@ -8,10 +8,6 @@ def getDatabaseAccounts() -> tuple[tuple[str, str], ...]:
     return (("Daniel", "tevo123"), ("Julia", "teo123"))
 
 
-DATABASE_ACCOUNTS: tuple[tuple[str, str], ...]
-DATABASE_ACCOUNTS = getDatabaseAccounts()
-
-
 def loginTerminal(DATABASE_ACCOUNTS: tuple[tuple[str, str], ...]) -> None:
     user: str = input("Digite seu usuário: ")
     password: str = input("Digite sua senha: ")
@@ -23,4 +19,5 @@ def loginTerminal(DATABASE_ACCOUNTS: tuple[tuple[str, str], ...]) -> None:
         loginTerminal(DATABASE_ACCOUNTS)
 
 
+DATABASE_ACCOUNTS: tuple[tuple[str, str], ...] = getDatabaseAccounts()
 loginTerminal(DATABASE_ACCOUNTS)
